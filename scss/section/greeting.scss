@@ -75,3 +75,12 @@
         width: 50%;
     }
 }
+.scroll-down {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: rem(40px);
+    &__link {
+        
+    }
+}
