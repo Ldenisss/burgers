@@ -39,6 +39,9 @@
         display: flex;
         align-items: center;
     }
+    &__img {
+        height: rem(89px);
+    }
     &__title--item {
         align-items: center;
         padding-top: 33px;

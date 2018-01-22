@@ -45,11 +45,16 @@
     }
 } 
 .greeting {
+    &__container {
+       
+        height: 100%;
+    }
     &__content {
         display: flex;
         align-items: center;
         justify-content: center;
         flex: 1;
+        margin-bottom: 9%;
     }
     &__title {
         color: #f9b43b;
@@ -65,5 +70,8 @@
     &__text {
         padding-left: 10px;
         padding-top: 80px;
+    }
+    &__logo {
+        width: 50%;
     }
 }
