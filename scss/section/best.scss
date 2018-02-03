@@ -2,56 +2,79 @@
     background-image: url("../img/twoPage/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50%;
-    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .best__title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #2f3234;
-    
+    text-align: center;
+    color: #2f3234; 
 }
 .best {
-    &__content {
+    &__container {
         display: flex;
-        align-items: center;
-        padding-top: 55px;
-        padding-bottom: 55px;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+    &__content {
+        padding-top: rem(55px);
+        padding-bottom: rem(55px);
+        width: 95%;
     }
     &__list {
         display: flex;
-        flex-direction: row;
+        @include phones () {
+            flex-direction: column;
+        }
     }
     &__item {
         display: flex;
         flex-direction: column;
-        width: 300px;
+        width: rem(300px);
         flex-wrap: nowrap;
         align-items: center;
-        padding-left: 36px;
+        padding-left: rem(36px);
+        @include phones () {
+            flex-direction: row;
+            width: 100%;
+            padding-left: 0;
+            margin-bottom: rem(50px);
+            align-items: center;
+        }
+    }
+    &__desc {
+        @include phones () {
+            display: flex;
+            flex-direction: column;
+            margin-left: rem(60px);
+
+        }
     }
     &__logo {
-        display: flex;
-        align-items: center;
+        width: rem(90px);
+        height: rem(89px);
+        
     }
     &__img {
-        height: rem(89px);
+       
     }
-    &__title--item {
-        align-items: center;
-        padding-top: 33px;
-        padding-bottom: 25px;
+    &__title--item { 
+        padding-top: rem(33px);
+        padding-bottom: rem(25px);
         font-family: 'Lifehack';
         line-height: 1.17;
-        letter-spacing: -0.6px;
+        letter-spacing: rem(-0.6px);
         font-size: rem(24.1px);
         color: #2f3234;
         text-align: center;
+        @include phones () {
+            text-align: start;
+            padding-top: 0;
+            padding-bottom: rem(15px);
+
+        }
+
     }
     &__text {
         align-items: center;
@@ -62,6 +85,10 @@
         color: rgba(47, 50, 52, 0.8);
         line-height: 1.71;
         opacity: 0.8;
+        @include phones () {
+            text-align: start;
+
+        }
     }
     
 }

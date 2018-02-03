@@ -3,6 +3,9 @@
     position: fixed;
     top: 9%;
     left: 96%;
+    @include tablets () {
+        display: none;
+    }
     &__item {
         padding-bottom: 15px;
     }

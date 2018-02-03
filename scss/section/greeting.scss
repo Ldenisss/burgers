@@ -2,16 +2,21 @@
     background-image: url("../img/onePage/greeting_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50%;
     position: relative;
 }
 .header {
     width: 100%;
     display:flex;
     align-items: center;
-    padding-top: 10px;
+    padding-top: rem(20px);
     &__menu {
         margin-left: auto;
+        @include tablets () {
+            display: none;
+        }
+        @include phones () {
+            display: none;
+        }
     }
 }
 .nav{
@@ -21,7 +26,7 @@
     }
     &__item {
         display: inline-block;
-        padding-left: 10px;
+        padding-left: rem(10px);
         text-transform: uppercase;
         font-weight: 500;
         line-height: 2.31;
@@ -46,8 +51,9 @@
 } 
 .greeting {
     &__container {
-       
-        height: 100%;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
     }
     &__content {
         display: flex;
@@ -55,9 +61,23 @@
         justify-content: center;
         flex: 1;
         margin-bottom: 9%;
+        @include tablets () {
+            flex-direction: column;
+            justify-content: center;
+        }
+        @include phones () {
+            flex-direction: column;
+            justify-content: center;
+        }
     }
     &__title {
         color: #f9b43b;
+        @include tablets () {
+            
+         }
+         @include phones () {
+            
+         }
     }
     &__title-after {
         font-family: 'Lifehack';
@@ -66,21 +86,69 @@
         line-height: 1.01;
         letter-spacing: -1.6px;
         color: #ffffff;
+        @include tablets () {
+           text-align: center;
+        }
+        @include phones () {
+            text-align: center;
+         }
     }
     &__text {
-        padding-left: 10px;
-        padding-top: 80px;
+        padding-left: rem(100px);
+        padding-top: rem(80px);
+        @include tablets () {
+            margin-top: rem(80px);
+        }
+        @include phones () {
+            margin-top: rem(80px);
+        }
     }
     &__logo {
-        width: 50%;
+        width: rem(368px);
+        height: rem(326px);
+        overflow: hidden;      
     }
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+    
 }
 .scroll-down {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding-bottom: rem(40px);
-    &__link {
+}
+
+.header__menu-item {
+    display: flex;
+    flex-direction: column;
+    margin-left: rem(30px);
+}
+.header__menu-item-img-size{
+    padding: rem(5px) 0;
+}
+.header__menu-phone {
+    display: none;
+
+    @include tablets () {
+        display: flex;
+        
+    }
+    @include phones () {
+        display: flex;
         
     }
 }
+.header__btn {
+    @include tablets () {
+        margin-left: auto;
+        
+    }
+    @include phones () {
+        margin-left: auto;
+        
+    }
+}
+
