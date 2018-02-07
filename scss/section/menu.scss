@@ -4,47 +4,118 @@
     background-size: cover;
     display: flex;
     justify-content: flex-end;
-    height: 100vh;
+    height: 100%;
 }
 .menu {
     &__container {
         display: flex;
         justify-content: space-between;
         width: 90%;
-        
-         
+        @include tablets {
+            position: relative;
+            width: 100%;
+        }
+        @include phones {
+            position: relative;
+            width: 100%;
+        }
     }
     &__content {
         display: flex;
-
+        @include tablets {
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            
+        }
+        @include phones {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
     }
     &__title {
         display: block;
-        padding-top: 100px;
+        padding-top: rem(100px);
         font-size: rem(72px);
         font-family: 'Gagalin';
         color: #ffffff;
         line-height: 0.89;
+        @include tablets {
+            padding-left: rem(50px);
+        }
+        @include phones {
+            padding-left: rem(20px);
+         }
+        
+
         
     }
     &__item-content {
         width: 0;
         overflow: hidden;
+        
+    &__img {
+        width: rem(80px);
+        @include tablets {
+            object-fit: contain;
+            width: rem(80px)
+         }
+        @include phones {
+           object-fit: contain;
+           width: rem(50px)
+        }
+        
+       
+    }  
     }
     &__link {
         display: flex;
         align-items: stretch;
-        position: relative;   
+        position: relative; 
+        max-width: rem(80px); 
+        overflow: hidden;
+        @include tablets {
+            object-fit: contain;
+            max-width: rem(70px)
+        }
+        @include phones {
+            object-fit: contain;
+            max-width: rem(50px)
+        }
+        
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(#2f3234,.5);
+        } 
     }
     &__desc{
         position: absolute;
-        bottom: 200px;
-        left: -100px;
+        bottom: rem(200px);
+        left: rem(-100px);
         transform: rotate(-90deg);
         font-family: "Gagalin";
         color: #ffffff;
         font-size: rem(40px);
-        width: 280px;  
+        width: rem(300px);
+        @include tablets {
+            bottom: 9.5rem;
+            left: -6.875rem;  
+         }
+        @include phones {
+            bottom: 9.5rem;
+            left: -7.875rem;
+            font-size: rem(30px);  
+         }
+         
+        
     }
 
     &__list {
@@ -57,9 +128,18 @@
 }
 .menu__item--active {
     .menu__item-content {
-        max-width: 700px;
+        max-width: rem(700px);
         width: 100%;
         background-color: rgba(#2f3234,.93);
-        padding: 30px;
+        padding: rem(30px);
+        @include phones {
+            padding: 0;
+            width: 0;
+        }
+        @include tablets {
+            padding: 0;
+            width: 0;
+        }
     }
+
 }

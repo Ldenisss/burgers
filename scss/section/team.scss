@@ -3,11 +3,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 100vh;
 }
-.team {
-    
-       
+.team {    
     &__item{
         @include tablets () {
             display: flex;
@@ -28,6 +25,10 @@
         height: 100%;
         background-color: rgba(#2f3234,.93);
         @include tablets  {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
             width: 100%;
         }
         @include phones  {
@@ -40,6 +41,7 @@
         padding-bottom: 50px;
         @include tablets  {
             text-align: center;
+
         }
         @include phones  {
             text-align: center;
@@ -56,11 +58,12 @@
         @include tablets  {
             text-align: center;
             justify-content: center;
+            font-size: rem(25.1px);
         }
         @include phones  {
             text-align: center;
             justify-content: center;
-
+            font-size: rem(25.1px);
         }
         
         
@@ -72,8 +75,6 @@
             border: 7px solid transparent;
             border-top-color: #f9b43b;
             margin-right: rem(10px);
-            
-
         }
     }
     &__block {
@@ -81,10 +82,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        width: 70%;
-        
-        
-        
+        width: 70%; 
     }
     &__logo {
         padding-right: rem(20px);

@@ -14,8 +14,11 @@ body,html {
     @include tablets  {
         font-size: 15px;
     }
-    @include phones  {
+    @include phones {
         font-size: 13px;
+    }
+    @include phones-min  {
+        font-size: 11px;
     }
 }
 
@@ -23,4 +26,5 @@ ul,li {
     margin: 0;
     padding: 0;
     list-style: none;
+    
 }

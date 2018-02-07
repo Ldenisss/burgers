@@ -1,16 +1,14 @@
 .wrapper {
     position: relative;
     width: 100%;
-    min-height: 100%;
-    overflow: hidden;
-    
+    height: 100%;
 }
 .maincontent {
     height: 100%;
 }
 .container {
     position: relative;
-    max-width: 940px;
+    max-width: rem(940px);
     width: 95%;
     margin: 0 auto;
     display: flex;
@@ -21,6 +19,14 @@
     height: 100%;
     background-color: grey;
     min-height: 650px;
+    @include tablets () {
+        min-height: initial;
+        overflow: hidden;
+    }
+    @include phones () {
+        min-height: initial;
+        overflow: hidden;
+    }
 }
 
 .order__link {

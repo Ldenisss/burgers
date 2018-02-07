@@ -53,6 +53,9 @@ body, html {
   @media screen and (max-width: 480px) {
     body, html {
       font-size: 13px; } }
+  @media screen and (max-width: 320px) {
+    body, html {
+      font-size: 11px; } }
 
 ul, li {
   margin: 0;
@@ -62,15 +65,14 @@ ul, li {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
-  overflow: hidden; }
+  height: 100%; }
 
 .maincontent {
   height: 100%; }
 
 .container {
   position: relative;
-  max-width: 940px;
+  max-width: 58.75rem;
   width: 95%;
   margin: 0 auto;
   display: -webkit-box;
@@ -88,6 +90,14 @@ ul, li {
   height: 100%;
   background-color: grey;
   min-height: 650px; }
+  @media screen and (max-width: 768px) {
+    .section {
+      min-height: initial;
+      overflow: hidden; } }
+  @media screen and (max-width: 480px) {
+    .section {
+      min-height: initial;
+      overflow: hidden; } }
 
 .order__link {
   min-width: 6.125rem;
@@ -169,7 +179,7 @@ ul, li {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 100vh; }
+  height: 100%; }
 
 .greeting__content {
   display: -webkit-box;
@@ -222,23 +232,21 @@ ul, li {
       text-align: center; } }
 
 .greeting__text {
-  padding-left: 6.25rem;
+  padding-left: 1.875rem;
   padding-top: 5rem; }
   @media screen and (max-width: 768px) {
     .greeting__text {
-      margin-top: 5rem; } }
+      padding-left: 0; } }
   @media screen and (max-width: 480px) {
     .greeting__text {
-      margin-top: 5rem; } }
+      padding-left: 0; } }
 
 .greeting__logo {
   width: 23rem;
-  height: 20.375rem;
-  overflow: hidden; }
+  height: 20.375rem; }
 
 .greeting__img {
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
 
 .scroll-down {
   display: -webkit-box;
@@ -252,21 +260,9 @@ ul, li {
   align-items: flex-end;
   padding-bottom: 2.5rem; }
 
-.header__menu-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-left: 1.875rem; }
-
-.header__menu-item-img-size {
-  padding: 0.3125rem 0; }
-
 .header__menu-phone {
-  display: none; }
+  display: none;
+  padding-left: 1.25rem; }
   @media screen and (max-width: 768px) {
     .header__menu-phone {
       display: -webkit-box;
@@ -285,6 +281,45 @@ ul, li {
 @media screen and (max-width: 480px) {
   .header__btn {
     margin-left: auto; } }
+
+.header__menu-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.header__item {
+  margin-bottom: 0.3125rem; }
+
+.header__item:last-child {
+  margin-bottom: 0; }
+
+.header__item:after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  content: "";
+  width: 1.5rem;
+  height: 0.25rem;
+  border-top-left-radius: 0.125rem;
+  border-bottom-left-radius: 0.125rem;
+  border-bottom-right-radius: 0.125rem;
+  border-top-right-radius: 0.125rem;
+  background: #fff; }
 
 .best {
   background-image: url("../img/twoPage/bg.png");
@@ -315,7 +350,7 @@ ul, li {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100vh; }
+  height: 100%; }
 
 .best__content {
   padding-top: 3.4375rem;
@@ -410,8 +445,7 @@ ul, li {
   background-image: url("../img/teamPage/sbs-1255-x-2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  height: 100vh; }
+  position: relative; }
 
 @media screen and (max-width: 768px) {
   .team__item {
@@ -444,6 +478,17 @@ ul, li {
   background-color: rgba(47, 50, 52, 0.93); }
   @media screen and (max-width: 768px) {
     .team__container {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
       width: 100%; } }
   @media screen and (max-width: 480px) {
     .team__container {
@@ -473,13 +518,15 @@ ul, li {
       text-align: center;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center; } }
+      justify-content: center;
+      font-size: 1.56875rem; } }
   @media screen and (max-width: 480px) {
     .team__trigger {
       text-align: center;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center; } }
+      justify-content: center;
+      font-size: 1.56875rem; } }
   .team__trigger:before {
     content: "";
     display: block;
@@ -587,7 +634,7 @@ ul, li {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  height: 100vh; }
+  height: 100%; }
 
 .menu__container {
   display: -webkit-box;
@@ -597,23 +644,61 @@ ul, li {
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 90%; }
+  @media screen and (max-width: 768px) {
+    .menu__container {
+      position: relative;
+      width: 100%; } }
+  @media screen and (max-width: 480px) {
+    .menu__container {
+      position: relative;
+      width: 100%; } }
 
 .menu__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media screen and (max-width: 768px) {
+    .menu__content {
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute; } }
+  @media screen and (max-width: 480px) {
+    .menu__content {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0; } }
 
 .menu__title {
   display: block;
-  padding-top: 100px;
+  padding-top: 6.25rem;
   font-size: 4.5rem;
   font-family: 'Gagalin';
   color: #ffffff;
   line-height: 0.89; }
+  @media screen and (max-width: 768px) {
+    .menu__title {
+      padding-left: 3.125rem; } }
+  @media screen and (max-width: 480px) {
+    .menu__title {
+      padding-left: 1.25rem; } }
 
 .menu__item-content {
   width: 0;
   overflow: hidden; }
+  .menu__item-content__img {
+    width: 5rem; }
+    @media screen and (max-width: 768px) {
+      .menu__item-content__img {
+        -o-object-fit: contain;
+        object-fit: contain;
+        width: 5rem; } }
+    @media screen and (max-width: 480px) {
+      .menu__item-content__img {
+        -o-object-fit: contain;
+        object-fit: contain;
+        width: 3.125rem; } }
 
 .menu__link {
   display: -webkit-box;
@@ -622,19 +707,48 @@ ul, li {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  position: relative; }
+  position: relative;
+  max-width: 5rem;
+  overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .menu__link {
+      -o-object-fit: contain;
+      object-fit: contain;
+      max-width: 4.375rem; } }
+  @media screen and (max-width: 480px) {
+    .menu__link {
+      -o-object-fit: contain;
+      object-fit: contain;
+      max-width: 3.125rem; } }
+  .menu__link:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(47, 50, 52, 0.5); }
 
 .menu__desc {
   position: absolute;
-  bottom: 200px;
-  left: -100px;
+  bottom: 12.5rem;
+  left: -6.25rem;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   font-family: "Gagalin";
   color: #ffffff;
   font-size: 2.5rem;
-  width: 280px; }
+  width: 18.75rem; }
+  @media screen and (max-width: 768px) {
+    .menu__desc {
+      bottom: 9.5rem;
+      left: -6.875rem; } }
+  @media screen and (max-width: 480px) {
+    .menu__desc {
+      bottom: 9.5rem;
+      left: -7.875rem;
+      font-size: 1.875rem; } }
 
 .menu__list {
   display: -webkit-box;
@@ -647,13 +761,21 @@ ul, li {
   display: flex; }
 
 .menu__item--active .menu__item-content {
-  max-width: 700px;
+  max-width: 43.75rem;
   width: 100%;
   background-color: rgba(47, 50, 52, 0.93);
-  padding: 30px; }
+  padding: 1.875rem; }
+  @media screen and (max-width: 480px) {
+    .menu__item--active .menu__item-content {
+      padding: 0;
+      width: 0; } }
+  @media screen and (max-width: 768px) {
+    .menu__item--active .menu__item-content {
+      padding: 0;
+      width: 0; } }
 
 .reviews {
-  height: 100vh; }
+  height: 100%; }
   .reviews__list {
     width: 100%;
     height: 100%;
@@ -756,7 +878,7 @@ ul, li {
   background-image: url("../img/formPage/bg-texture.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -779,7 +901,7 @@ ul, li {
 .form__title {
   color: #f9b43b;
   font-size: 4.51875rem;
-  padding-bottom: 3.75rem;
+  padding-bottom: 1.875rem;
   text-align: center; }
 
 .form__bg-img {
@@ -933,10 +1055,10 @@ ul, li {
   margin-left: 1.25rem;
   border: none;
   color: #fff;
-  background-color: black; }
+  background-color: initial; }
 
 .map__container {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -952,6 +1074,7 @@ ul, li {
   background-image: url("../img/mapPage/layer-4.png");
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 100%;
   height: 93%; }
   @media screen and (max-width: 480px) {
     .map__content {
@@ -961,7 +1084,7 @@ ul, li {
   background: url("../img/formPage/bg-cover.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  max-width: 100%;
   height: 7%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1002,24 +1125,22 @@ ul, li {
     font-size: 14px;
     font-weight: 300;
     color: #ffffff;
-    margin-top: 10px; }
+    margin-top: 0.625rem; }
   .footer__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
   .footer__item {
-    padding-right: 20px; }
+    padding-right: 1.25rem; }
   @media screen and (max-width: 480px) {
     .footer__contact {
       text-align: center;
-      margin-top: 20px;
-      margin-bottom: 20px; } }
+      margin-top: 1.25rem;
+      margin-bottom: 0.625rem; } }
 
 .footer__phone {
   font-weight: 700;
   color: #e45028; }
-  .footer__phone:after {
-    background-image: url("../img/footerPage/phone.png"); }
 
 .pagination {
   display: -webkit-box;

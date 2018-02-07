@@ -53,7 +53,7 @@
     &__container {
         display: flex;
         justify-content: center;
-        height: 100vh;
+        height: 100%;
     }
     &__content {
         display: flex;
@@ -72,12 +72,6 @@
     }
     &__title {
         color: #f9b43b;
-        @include tablets () {
-            
-         }
-         @include phones () {
-            
-         }
     }
     &__title-after {
         font-family: 'Lifehack';
@@ -94,25 +88,24 @@
          }
     }
     &__text {
-        padding-left: rem(100px);
+        padding-left: rem(30px);
         padding-top: rem(80px);
         @include tablets () {
-            margin-top: rem(80px);
+            
+            padding-left: 0;
         }
         @include phones () {
-            margin-top: rem(80px);
+            
+            padding-left: 0;
         }
     }
     &__logo {
         width: rem(368px);
         height: rem(326px);
-        overflow: hidden;      
     }
     &__img {
-        width: 100%;
-        height: 100%;
-    }
-    
+        width: 100%; 
+    }   
 }
 .scroll-down {
     display: flex;
@@ -121,16 +114,10 @@
     padding-bottom: rem(40px);
 }
 
-.header__menu-item {
-    display: flex;
-    flex-direction: column;
-    margin-left: rem(30px);
-}
-.header__menu-item-img-size{
-    padding: rem(5px) 0;
-}
 .header__menu-phone {
     display: none;
+    padding-left: rem(20px);
+    
 
     @include tablets () {
         display: flex;
@@ -138,6 +125,7 @@
     }
     @include phones () {
         display: flex;
+
         
     }
 }
@@ -150,5 +138,32 @@
         margin-left: auto;
         
     }
+}
+.header__menu-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.header__list{
+   display: flex;
+   flex-direction: column;
+}
+.header__item {
+    margin-bottom: rem(5px);
+}
+.header__item:last-child {
+    margin-bottom: 0;
+}
+.header__item:after {
+    display: flex;
+    content: "";
+    width: rem(24px);
+    height: rem(4px);
+    border-top-left-radius: rem(2px);
+    border-bottom-left-radius: rem(2px);
+    border-bottom-right-radius: rem(2px);
+    border-top-right-radius: rem(2px);
+    background: #fff;
 }
 

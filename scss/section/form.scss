@@ -2,14 +2,13 @@
     background-image: url("../img/formPage/bg-texture.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
    
 }
 .form__container { 
-   
     display: flex;
     flex-direction: column;
 }
@@ -17,7 +16,7 @@
     &__title {
         color:  #f9b43b;
         font-size: rem(72.3px);
-        padding-bottom: rem(60px);
+        padding-bottom: rem(30px);
         text-align: center;
     }
     &__bg-img {
@@ -147,6 +146,6 @@
     
     border: none;
     color: #fff;
-    background-color: black;
+    background-color: initial;
 
 }
