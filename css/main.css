@@ -180,10 +180,12 @@ ul, li {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 100%; }
 
 .greeting__content {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -918,10 +920,12 @@ ul, li {
   flex-direction: column; }
   @media screen and (max-width: 768px) {
     .form__container {
-      padding-top: 0.9375rem; } }
+      padding-top: 0.9375rem;
+      height: 90%; } }
   @media screen and (max-width: 480px) {
     .form__container {
-      padding-bottom: 0.9375rem; } }
+      padding-bottom: 0.9375rem;
+      height: 90%; } }
 
 .form__title {
   color: #f9b43b;

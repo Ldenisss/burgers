@@ -13,10 +13,12 @@
     flex-direction: column;
     
     @include tablets () {
-        padding-top: rem(15px)
+        padding-top: rem(15px);
+        height: 90%;
     }
     @include phones () {
-        padding-bottom: rem(15px)
+        padding-bottom: rem(15px);
+        height: 90%;
     }
 }
 .form{
