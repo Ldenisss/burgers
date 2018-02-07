@@ -10,21 +10,25 @@
 .best__title {
     text-align: center;
     color: #2f3234; 
-    @include tablets {
-        margin-top: rem(20px);
-    }
+    
 }
 .best {
     &__container {
         display: flex;
         align-items: center;
         flex-direction: column;
-        height: 100%;
+        
     }
     &__content {
         padding-top: rem(55px);
         padding-bottom: rem(55px);
         width: 95%;
+        @include tablets  {
+            padding-top: rem(55px);
+        }
+        @include phones  {
+            padding-top: rem(15px);
+        }
     }
     &__list {
         display: flex;
@@ -43,7 +47,7 @@
             flex-direction: row;
             width: 100%;
             padding-left: 0;
-            margin-bottom: rem(50px);
+            
             align-items: center;
         }
     }

@@ -63,11 +63,14 @@
         justify-content: center;
         flex: 1;
         margin-bottom: 9%;
+       
         @include tablets () {
+            margin-top: rem(20px);
             flex-direction: column;
             justify-content: center;
         }
         @include phones () {
+            margin-top: rem(20px);
             flex-direction: column;
             justify-content: center;
         }
@@ -93,11 +96,11 @@
         padding-left: rem(30px);
         padding-top: rem(80px);
         @include tablets () {
-            
+            padding-top: rem(20px);
             padding-left: 0;
         }
         @include phones () {
-            
+            padding-top: rem(20px);
             padding-left: 0;
         }
     }
