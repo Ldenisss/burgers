@@ -11,7 +11,13 @@
 .form__container { 
     display: flex;
     flex-direction: column;
-    height: 100%;
+    
+    @include tablets () {
+        padding-top: rem(15px)
+    }
+    @include phones () {
+        padding-bottom: rem(15px)
+    }
 }
 .form{
     &__title {

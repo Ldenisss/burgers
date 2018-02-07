@@ -118,6 +118,11 @@
     justify-content: center;
     align-items: flex-end;
     padding-bottom: rem(40px);
+    @include phones () {
+        padding-bottom: rem(10px);
+
+        
+    }
 }
 
 .header__menu-phone {
