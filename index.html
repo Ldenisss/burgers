@@ -520,6 +520,23 @@
                 </ul>
             </div>
        </div>
-    </div>    
+    </div>   
+    <script >
+        var body = document.querySelector("body");
+        const openMenu = document.querySelector(".header__menu-phone");
+        const overlay = document.querySelector(".greeting");
+        const logo = document.querySelector(".header__logo");
+        const headerMenu = document.querySelector(".header__menu");  
+
+        openMenu.addEventListener('click', function(e) {
+            e.preventDefault();
+            body.classList.toggle('overlay');
+            overlay.classList.toggle('greeting__container-menu');
+            openMenu.classList.toggle('header__menu-phone-active');
+            logo.classList.toggle("header__logo-phone");
+            headerMenu.classList.toggle("header__menu-active");   
+        })
+
+    </script> 
 </body>
 </html>
