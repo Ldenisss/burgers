@@ -1004,9 +1004,8 @@ ul, li {
   font-family: "Gagalin";
   font-size: 0.88125rem;
   color: #f9b43b;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  display: inline-block;
+  vertical-align: middle; }
   @media screen and (max-width: 768px) {
     .team__trigger {
       text-align: center;
@@ -1023,10 +1022,11 @@ ul, li {
       font-size: 1.56875rem; } }
   .team__trigger:before {
     content: "";
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
     width: 0;
     height: 0;
-    border: 7px solid transparent;
+    border: 6px solid transparent;
     border-top-color: #f9b43b;
     margin-right: 0.625rem; }
 
@@ -1109,14 +1109,11 @@ ul, li {
 .team__content--active {
   height: 100%; }
 
-.team__trigger--active {
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start; }
-  .team__trigger--active:before {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg); }
+.team__trigger--active:before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  padding-top: 0.3125rem; }
 
 .menu {
   background-image: url("../img/menuPage/menu-bg.png");
@@ -1182,7 +1179,11 @@ ul, li {
   width: 0;
   overflow: hidden; }
   .menu__item-content__img {
-    width: 5rem; }
+    max-width: 5rem;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%; }
     @media screen and (max-width: 768px) {
       .menu__item-content__img {
         -o-object-fit: contain;
@@ -1226,7 +1227,7 @@ ul, li {
 .menu__desc {
   position: absolute;
   bottom: 12.5rem;
-  left: -6.25rem;
+  left: -6.875rem;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
@@ -1258,7 +1259,8 @@ ul, li {
   max-width: 43.75rem;
   width: 100%;
   background-color: rgba(47, 50, 52, 0.93);
-  padding: 1.875rem; }
+  padding: 1.875rem;
+  color: #ffffff; }
   @media screen and (max-width: 480px) {
     .menu__item--active .menu__item-content {
       padding: 0;
@@ -1419,7 +1421,7 @@ ul, li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%; }
+  width: 95%; }
   @media screen and (max-width: 768px) {
     .form__content {
       -webkit-box-orient: vertical;

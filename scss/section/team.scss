@@ -53,8 +53,8 @@
         font-family: "Gagalin";
         font-size: rem(14.1px);
         color: #f9b43b;
-        display: flex;
-        
+        display: inline-block;
+        vertical-align: middle;
         @include tablets  {
             text-align: center;
             justify-content: center;
@@ -69,10 +69,11 @@
         
         &:before{
             content: "";
-            display: block;
+            display: inline-block;
+            vertical-align: middle;
             width: 0;
             height: 0;
-            border: 7px solid transparent;
+            border: 6px solid transparent;
             border-top-color: #f9b43b;
             margin-right: rem(10px);
         }
@@ -146,9 +147,10 @@
     
 }
 .team__trigger--active {
-    align-items: flex-start;
+    
     &:before {
         transform: rotate(180deg);
+        padding-top: rem(5px);
         
     }
     

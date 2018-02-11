@@ -58,7 +58,10 @@
         overflow: hidden;
         
     &__img {
-        width: rem(80px);
+        max-width: rem(80px);
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
         @include tablets {
             object-fit: contain;
             width: rem(80px)
@@ -99,7 +102,7 @@
     &__desc{
         position: absolute;
         bottom: rem(200px);
-        left: rem(-100px);
+        left: rem(-110px);
         transform: rotate(-90deg);
         font-family: "Gagalin";
         color: #ffffff;
@@ -132,6 +135,7 @@
         width: 100%;
         background-color: rgba(#2f3234,.93);
         padding: rem(30px);
+        color: #ffffff;
         @include phones {
             padding: 0;
             width: 0;
