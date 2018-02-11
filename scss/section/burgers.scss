@@ -150,8 +150,8 @@
     left: 0;
     @include phones {
         text-align: center;
-        top: rem(-70px);
-        left: rem(-20px);
+        top: rem(-35px);
+        left: rem(-30px);
     }
 }
 .burgers__compositio-logo {
@@ -182,8 +182,8 @@
         bottom: 95%;
     }
     @include phones {
-        left: 83%;
-        bottom: 96%;
+        left: 84%;
+        bottom: 90%;
         
     }
     

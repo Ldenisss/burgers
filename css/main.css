@@ -731,8 +731,8 @@ ul, li {
   @media screen and (max-width: 480px) {
     .burgers__composition {
       text-align: center;
-      top: -4.375rem;
-      left: -1.25rem; } }
+      top: -2.1875rem;
+      left: -1.875rem; } }
 
 .burgers__compositio-logo {
   max-width: 2.875rem;
@@ -767,8 +767,8 @@ ul, li {
       bottom: 95%; } }
   @media screen and (max-width: 480px) {
     .burgers__kkal {
-      left: 83%;
-      bottom: 96%; } }
+      left: 84%;
+      bottom: 90%; } }
 
 .burgers__kkal-container {
   display: -webkit-box;
