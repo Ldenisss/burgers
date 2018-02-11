@@ -732,7 +732,7 @@ ul, li {
     .burgers__composition {
       text-align: center;
       top: -2.1875rem;
-      left: -1.875rem; } }
+      left: -2.5rem; } }
 
 .burgers__compositio-logo {
   max-width: 2.875rem;
@@ -845,8 +845,8 @@ ul, li {
   align-items: center; }
   @media screen and (max-width: 480px) {
     .burgers__composition-content {
-      top: -4.375rem;
-      left: 4.375rem;
+      top: -2.1875rem;
+      left: 3.125rem;
       z-index: 1;
       width: 21.875rem; } }
 
