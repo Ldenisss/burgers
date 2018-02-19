@@ -11,6 +11,9 @@ body {
 }
 body,html {
     height: 100%;
+    @include desktop  {
+        font-size: 15px;
+    }
     @include tablets  {
         font-size: 15px;
     }

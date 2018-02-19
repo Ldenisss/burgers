@@ -685,6 +685,29 @@
         CloseComposition.addEventListener('click', function(){
             OpenComposition.classList.remove('burgers__composition-content-open')
         });
+        
+
+        //OPS
+
+        const sectionWheel = document.querySelector(".maincontent");
+        console.log(sectionWheel.length);
+        
+
+        document.addEventListener('wheel',function(e) {
+            let scroll = getComputedStyle(sectionWheel);
+            console.log(scroll.top);
+            if (e.wheelDeltaY == 120) {
+                console.log("up")
+                scroll = scroll + '100%';
+            }
+            if (e.wheelDeltaY != 120) {
+                console.log("down");
+                let down = sectionWheel.style.top = '-200%';
+                scroll = scroll - down;
+                console.log(scroll);
+            }
+        })
+
     </script> 
 </body>
 </html>
