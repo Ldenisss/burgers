@@ -1,0 +1,157 @@
+.team {
+    background-image: url("../img/teamPage/sbs-1255-x-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.team {    
+    &__item{
+        @include tablets () {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        @include phones () {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    &__container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-color: rgba(#2f3234,.93);
+        @include tablets  {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
+        @include phones  {
+            width: 100%;
+        }
+    }
+    &__title {
+        color: #f9b43b;
+        font-size: rem(72.3px);
+        padding-bottom: 50px;
+        @include tablets  {
+            text-align: center;
+
+        }
+        @include phones  {
+            text-align: center;
+        }
+        
+    }
+    &__trigger {
+        text-decoration: none;
+        font-family: "Gagalin";
+        font-size: rem(14.1px);
+        color: #f9b43b;
+        display: inline-block;
+        vertical-align: middle;
+        @include tablets  {
+            text-align: center;
+            justify-content: center;
+            font-size: rem(25.1px);
+        }
+        @include phones  {
+            text-align: center;
+            justify-content: center;
+            font-size: rem(25.1px);
+        }
+        
+        
+        &:before{
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-top-color: #f9b43b;
+            margin-right: rem(10px);
+        }
+    }
+    &__block {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 70%; 
+    }
+    &__logo {
+        padding-right: rem(20px);
+        @include tablets () {
+            padding-right:0;
+        }
+        @include phones () {
+            padding-right:0;
+        }
+        
+    }
+    &__img {
+        width: rem(100px);
+        height:  rem(100px);
+        border-radius: 50%;
+    }
+    &__text-title{
+        font-family: 'Ubuntu';
+        font-weight: 500;
+        color: #ffff;
+        @include tablets  {
+            text-align: center;
+        }
+        @include phones  {
+            text-align: center;
+        }
+    }
+    &__text {
+        max-width: rem(250px);
+        @include tablets  {
+            max-width: 100%;
+        }
+        @include phones  {
+            max-width: 100%;
+        }
+    }
+    &__text-desc {
+        font-family: 'Ubuntu';
+        color: #ffff;
+        font-weight: 300;
+    }
+    &__content {
+        display: flex;
+        padding-top: rem(20px);
+        height: 0;
+        overflow: hidden;
+        @include tablets () {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        @include phones () {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}
+.team__content--active {
+    height: 100%;
+    
+}
+.team__trigger--active {
+    
+    &:before {
+        transform: rotate(180deg);
+        padding-top: rem(5px);
+        
+    }
+    
+}
